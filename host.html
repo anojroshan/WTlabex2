@@ -1,0 +1,190 @@
+<html>
+    <head>
+        <title>Host_AIRBNB</title>
+        <link href='https://fonts.googleapis.com/css?family=Anton' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Berkshire Swash' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Average Sans' rel='stylesheet'>
+
+        <style>
+            *
+        {
+            margin: 0;
+            padding: 0;
+        }
+        form
+        {
+            display: flex;
+    justify-content: center;
+    align-items: center;
+        }
+        .hostbg
+            {
+                background-color: rgba(254,223,223,255);
+               
+                background-repeat: no-repeat;
+                height: 100vh;
+            }
+        .hostbg1
+            {
+                height: 30vh;
+            background: linear-gradient( rgba(0,0,0, 0.8), rgba(0,0,0, 0.8) ), url(botbg.jpg);
+            }
+            .hostop
+           {
+              height: 80px;
+              width: 100%;
+              background-color:rgba(255,91,97,255);
+           }
+           .logotop
+           {
+             width: 160px; 
+             height: 60px;
+             padding: 10px 100px;
+           }
+           .hostop ul
+           {
+               float: right;
+               margin-right: 20px;  
+           }
+           .hostop ul li
+           {
+               list-style: none;
+               margin: 0px 20px;
+               display: inline-block;
+               line-height: 80px;
+           }
+           .hostop ul li a
+           {
+               text-decoration: none;
+               color: white;
+               font-size: 20px;
+               font-family: 'Sofia';
+               
+           }
+           .hostop ul li a:hover
+           {
+               background-color:white;
+               border-width: 5px;
+               border-style: solid;
+               border-radius: 15px;
+               color:rgba(255,91,97,255) ;
+               padding: 2px 4px;
+           }
+           label
+           {
+               width: 100px;
+               display: inline-block;
+               font-family: 'Average Sans';
+               color: white;
+               
+           }
+           input,p
+           {
+               font-family: 'Average Sans';
+               color: white;
+           }
+           .male , .female , .other
+           {
+               width: auto;
+               padding: 10px;
+           }
+           .frm
+           {
+               border: 2px solid white;
+               border-radius: 20px;
+               padding: 15px 300px;
+               background: linear-gradient( rgba(0,0,0, 0.5), rgba(0,0,0, 0.5) ), url(hands.jpg);
+           }
+           .bot1 ul
+           {
+               margin-left: 140px;
+               margin-right: 20px;  
+           }
+           .bot1 ul li
+           {
+               list-style: none;
+               margin: 0px 80px;
+               display: inline-block;
+               line-height: 80px;
+           }
+           .bot1 ul li a
+           {
+               text-decoration: none;
+               color: white;
+               font-size: 20px;
+               font-family: 'Sofia';
+           }
+           .bot1 ul li a:hover
+           {
+               background-color:rgba(255, 255, 255, 0.2);
+               border-width: 0px;
+               border-style: solid;
+               border-radius: 15px;
+               padding: 2px 4px;
+           }
+        </style>
+    </head>
+    <body>
+        <div class="hostbg">
+            <nav class="hostop">
+                <a href="https://www.airbnb.co.in/"><img class="logotop" src="airbnblogo1.jpg"></a>
+                <ul>
+                    <li><a href="explore.html">Explore</a></li>
+                    <li><a href="host.html">Host</a></li>
+                    <li><a href="about.html">About</a></li>
+                    
+                </ul>
+            </nav>
+            <form style="margin-top: 20px;" action="results.html" method="GET" id="hostform">
+                <div class="frm">
+                    <label for="name">Name:</label>
+                    <input style="color: black;" type="text" name="name" id="name" placeholder="your full name" required>
+                <br><br>
+                    <label for="dob">Date of Birth:</label>
+                    <input style="color: black;" type="date" name="dob" id="dob" max="2001-12-31" required>
+                    <br><br>
+                    <p>Sex:</p><br>
+                    <label class="male" for="Male">Male</label>
+                    <input  type="radio" name="sex" id="Male" value="male">
+                    <label class="female" for="female">Female</label>
+                    <input type="radio" name="sex" id="female" value="female">
+                    <label class="other" for="other">Other</label>
+                    <input type="radio" name="sex" id="other" value="Other">
+                    <br><br>
+                    <label for="place">What kind of place will you be hosting:</label>
+                    <select name="place" id="place" required>
+                        <option value="Flat">Flat</option>
+                        <option value="House">House</option>
+                        <option value="Secondary unit">Secondary unit</option>
+                        <option value="Unique place">Unique place</option>
+                        <option value="Bed and breakfast">Bed and breakfast</option>
+                        <option value="Botique hotel">Botique hotel</option>
+                    </select><br><br>
+                    <label for="add">Address:</label>
+                    <textarea rows="4" cols="50" name="add" id="add" form="hostform" required></textarea><br><br>
+
+                    <label for="number">Phone:(+91)</label>
+                    <input style="color: black;" type="tel" name="number" id="number" placeholder="10 digit ph no." required><br><br>
+                    <label for="email">Email:</label>
+                    <input style="color: black;" type="email" name="email" id="email" required><br><br>
+                    <label for="pic">Attach images:</label>
+                    <input type="file" id="file" name="file">
+                    <button style="font-family: 'Average Sans';color: black;padding: 10px 20px;background-color: chartreuse; cursor:pointer;" type="submit">Submit</button>
+                    
+                </div>
+            </form>
+        </div>
+        <div class="hostbg1">
+            <nav class="bot1">
+                <ul>
+                    <li><a href="https://www.airbnb.co.in/terms/privacy_policy">Privacy</a></li>
+                    <li><a href="https://www.airbnb.co.in/terms">Terms</a></li>
+                    <li><a href="https://www.airbnb.co.in/sitemaps/v2">Sitemap</a></li>
+                    <li><a href="https://www.airbnb.co.in/about/company-details">Company details</a></li>
+                </ul>
+            </nav>
+            <p style="color: rgba(255, 255, 255,0.3);margin-left: 480px;margin-top: 50px;font-family:'Anton';">All © reserved by Anoj Roshan 19ITR006 @2021</p>
+        </div>
+    </body>
+</html>
