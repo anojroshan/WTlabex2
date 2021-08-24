@@ -240,14 +240,74 @@
                border-radius: 15px;
                padding: 2px 4px;
            }
+           .dropbtn {
+  background-color:rgba(255,91,97,255);;
+  border-color: rgba(255,91,97,255);;
+  border-radius: 15px;
+  border-width:5px;
+  color: black;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+.dropbtn:hover 
+{
+    color:rgba(255,91,97,255);;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {color: rgba(255,91,97,255);}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    color:rgba(255,91,97,255);
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color:white;
+}
            
         </style>
     </head>
     <body>
         <div class="expbg">
             <nav class="top">
-                <a href="index.html"><img class="logotop" src="airbnblogo1.jpg"></a>
+                <a href="https://www.airbnb.co.in/"><img class="logotop" src="airbnblogo1.jpg"></a>
                 <ul>
+                    <div class="dropdown">
+                        <button class="dropbtn">VISIT</button>
+                        <div class="dropdown-content">
+                        <a href="https://www.airbnb.co.in/host/homes">what is host?</a>
+                        <a href="https://www.airbnb.co.in/d/howairbnbworks">how airbnb works?</a>
+                        </div>
+                      </div>
                     <li><a href="explore.html">Explore</a></li>
                     <li><a href="host.html">Host</a></li>
                     <li><a href="about.html">About</a></li>
